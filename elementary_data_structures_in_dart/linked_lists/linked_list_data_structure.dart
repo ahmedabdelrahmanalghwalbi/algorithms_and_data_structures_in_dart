@@ -4,16 +4,20 @@ import 'node.dart';
 nodes of the list respectively.
 */
 
-class LinkedList<T> {
+class LinkedList<T> extends Iterable {
   Node<T>? head;
   Node<T>? tail;
   LinkedList({this.head, this.tail});
+  @override //override from Iterable Interface
   bool get isEmpty => tail == null;
   @override
   String toString() {
     if (isEmpty) return "This Linked List is Empty";
     return head.toString();
   }
+
+  @override
+  Iterator get iterator => _LinkedListIterator(this);
 
 //push: Adds a value at the front of the list.
   void set push(T value) {
@@ -100,5 +104,35 @@ class LinkedList<T> {
       tail = nodeThatIWillRemoveAfterIt;
     }
     nodeThatIWillRemoveAfterIt.next = nodeThatIWillRemoveAfterIt.next?.next;
+  }
+}
+
+//Creating an Iterator
+class _LinkedListIterator<T> implements Iterator<T> {
+  final LinkedList<T> _list;
+  _LinkedListIterator(this._list);
+  Node<T>? _currentNode;
+  @override
+  T get current => _currentNode!.value;
+
+  bool _firstPass = true;
+  @override
+  bool moveNext() {
+    // 1. If the list is empty, then there’s no need to go any further. Let the iterable know
+    // that there are no more items in this collection by returning false.
+    if (_list.isEmpty) return false;
+
+    //2. Since _currentNode is null to start with, you need to set it to head on the first
+    // pass. After that just point it to the next node in the chain.
+    if (_firstPass) {
+      _currentNode = _list.head;
+      _firstPass = false;
+    } else {
+      _currentNode = _currentNode?.next;
+    }
+
+    //3. Returning true lets the iterable know that there are still more elements, but
+    // when the current node is null, you know that you’ve reached the end of the list.
+    return _currentNode != null;
   }
 }

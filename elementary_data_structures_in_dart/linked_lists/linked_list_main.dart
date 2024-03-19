@@ -39,4 +39,13 @@ void main() {
   Node<int>? nodeThatIWillRemoveAfterIt = linkedList.nodeAt(1);
   linkedList.removeAfter(nodeThatIWillRemoveAfterIt);
   print(linkedList); //expected :- 2 -> 3
+  //Looping Through a Linked List
+  print("Looping Through a List");
+  final LinkedList<int> list = LinkedList<int>();
+  list.push = 3;
+  list.push = 2;
+  list.push = 1;
+  for (final element in list) {
+    print(element); //expected 1 2 3
+  }
 }

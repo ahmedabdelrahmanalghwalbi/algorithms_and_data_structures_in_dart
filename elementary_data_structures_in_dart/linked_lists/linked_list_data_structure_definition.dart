@@ -23,6 +23,11 @@
     1- nodeAt -> O(i) -> where i is the givin index.
     2- removeAfterNode -> O(1)
   
-
-
+5- Making a Linked List Iterable
+  if you were to try to do that with your LinkedList implementation, you’d
+  get this error:
+    The type 'LinkedList<int>' used in the 'for' loop must implement Iterable.  
+  The reason that you can loop through various collections in Dart is because they
+  implement the Iterable interface. You can do the same to make LinkedList
+  iterable.
 */ 
