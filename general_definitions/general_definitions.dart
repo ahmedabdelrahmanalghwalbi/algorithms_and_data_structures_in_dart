@@ -1,0 +1,1 @@
+// 1- recursion allows you to build a call stack (it's seems like stack of calls of certain method).
