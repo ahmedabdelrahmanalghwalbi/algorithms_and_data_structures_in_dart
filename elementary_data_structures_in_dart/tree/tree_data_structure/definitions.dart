@@ -21,6 +21,10 @@
 
 1- depth-first traversal (DFS):- 
    - a technique that starts at the root and visits nodes as deep as it can before backtracking.
-   - 
+2- level-order traversal :-
+   - A level-order traversal means that you visit all of the nodes at an upper level before visiting any of the nodes at the next level down.
+   - A tree can be divided into levels based on the distance of the nodes from the root.
+     The root itself is level 0, nodes that are direct children of the root are level 1, the
+     children of these children are level 2, and on it goes.
 
 */
