@@ -54,3 +54,20 @@ The methods all contained the same lines of code but executed them in varying or
 The difference is only in where the action takes place.
 Each one of these traversal algorithms has a time and space complexity of O(n).
 */
+
+/* Kinds of Binary Tree :-
+------------------------
+1- Full (Strictly) Binary Tree :- if every node has zero (or) two children.
+2- Complete Binary Tree :- 
+   1- all levels is completely filled expect the last-level.
+   2- all nodes as left as possible in last level.
+3- Perfect Binary Tree (All Levels in Completely filled):-
+   1- every node has two children.
+   2- all leaves are at the same level.
+4- Balanced Binary Tree :-
+   1- the height of the tree == o(log2n)
+   2- | height(left subtree) - height(left subtree) | <=1
+5- degenerate (or pathological) Tree :-
+   1- every parent node has only one child either (left - right).
+   2- such trees are performance-wise same like linked list.
+*/
