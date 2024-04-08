@@ -26,5 +26,9 @@
    - A tree can be divided into levels based on the distance of the nodes from the root.
      The root itself is level 0, nodes that are direct children of the root are level 1, the
      children of these children are level 2, and on it goes.
+   - Level-order traversal is a fundamental algorithm used to traverse and visit all the nodes in a binary tree.
+   - In level-order traversal, nodes are visited level by level, starting from the root and moving down to the deepest level,
+     visiting nodes from left to right within each level.
+   - This traversal is also known as breadth-first traversal.
 
 */
