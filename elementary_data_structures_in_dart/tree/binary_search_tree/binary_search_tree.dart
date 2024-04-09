@@ -1,4 +1,4 @@
-import '../binary_tree/binary_search_tree.dart';
+import '../binary_tree/binary_tree.dart';
 
 class BinarySearchTree<E extends Comparable<dynamic>> {
   BinaryNode<E>? root;

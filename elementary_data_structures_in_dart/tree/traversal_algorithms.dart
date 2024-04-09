@@ -1,4 +1,4 @@
-import '../../queue/queue_implementations/queue_using_list.dart';
+import '../queue/queue_implementations/queue_using_list.dart';
 import 'tree.dart';
 
 abstract class TraversalAlgorithms {
